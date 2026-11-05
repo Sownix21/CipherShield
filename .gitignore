@@ -1,0 +1,45 @@
+# Gradle / Kotlin / Android generated state
+.gradle/
+.gradle-user/
+.kotlin/
+.android/
+.android-user/
+**/build/
+.externalNativeBuild/
+.cxx/
+captures/
+
+# IDE and local SDK configuration
+.idea/
+.vscode/
+*.iml
+local.properties
+
+# Packaged applications and release exports
+/app/release/
+*.apk
+*.aab
+*.apks
+*.idsig
+*.dm
+
+# Signing material and local secrets
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+*.key
+key.properties
+keystore.properties
+signing.properties
+.env
+.env.*
+!.env.example
+
+# Local logs and operating-system files
+*.log
+*.hprof
+.DS_Store
+Thumbs.db
+Desktop.ini

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+
+    <!-- A private document sealed with the CipherShield C lock.
+         Visible foreground stays within the central 66 dp circular safe area. -->
+    <path android:pathData="M40,27H59L72,40V70Q72,77 65,77H40Q33,77 33,70V34Q33,27 40,27Z" android:fillColor="#40051527"
+        android:strokeColor="#20000A1A" android:strokeWidth="3" />
+    <path android:pathData="M40,27H59L72,40V70Q72,77 65,77H40Q33,77 33,70V34Q33,27 40,27Z" android:strokeColor="#C9DFFFF8" android:strokeWidth="1.1">
+        <aapt:attr name="android:fillColor">
+            <gradient android:startX="33" android:startY="27" android:endX="74" android:endY="77" android:type="linear">
+                <item android:offset="0" android:color="#FFF0FFF9" />
+                <item android:offset="0.4" android:color="#FFD2F9EB" />
+                <item android:offset="1" android:color="#FF70C5C5" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <!-- Folded corner and a soft reflected pane give the paper depth. -->
+    <path android:pathData="M59,28V36Q59,41 64,41H71L59,28Z" android:fillColor="#FF439EAD" />
+    <path android:pathData="M60,29V35Q60,39 64,39H70Z" android:fillColor="#D9FFFFFF" />
+    <path android:pathData="M39,29H57V43L35,61V35Q35,29 39,29Z" android:fillColor="#30FFFFFF" />
+    <!-- Text lines: the app protects arbitrary text, not just passwords. -->
+    <path android:pathData="M42,43H52M42,51H60M42,59H51M42,67H48"
+        android:fillColor="#00000000" android:strokeColor="#FF246477" android:strokeWidth="3.2"
+        android:strokeLineCap="round" />
+    <!-- Dark glass seal, offset without covering the document's identity. -->
+    <path android:pathData="M66,49A15,15 0,1 1,66,79A15,15 0,1 1,66,49Z"
+        android:fillColor="#33061224" android:strokeColor="#18061224" android:strokeWidth="2" />
+    <path android:pathData="M66,48A15,15 0,1 1,66,78A15,15 0,1 1,66,48Z" android:strokeWidth="1.2">
+        <aapt:attr name="android:fillColor">
+            <gradient android:startX="54" android:startY="49" android:endX="79" android:endY="77" android:type="linear">
+                <item android:offset="0" android:color="#FF7F78D7" />
+                <item android:offset="0.5" android:color="#FF4F4E9C" />
+                <item android:offset="1" android:color="#FF2C3764" />
+            </gradient>
+        </aapt:attr>
+        <aapt:attr name="android:strokeColor">
+            <gradient android:startX="56" android:startY="48" android:endX="78" android:endY="77" android:type="linear">
+                <item android:offset="0" android:color="#FFE4DDFF" />
+                <item android:offset="1" android:color="#FF778DC6" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path android:pathData="M55,55Q61,48 70,51" android:fillColor="#00000000"
+        android:strokeColor="#66FFFFFF" android:strokeWidth="1.1" android:strokeLineCap="round" />
+    <!-- Closed shackle and C engraved in the lock body. -->
+    <path android:pathData="M61,61V57A5,5 0,0 1,71,57V61"
+        android:fillColor="#00000000" android:strokeColor="#FFF1FCFF" android:strokeWidth="2.4" android:strokeLineCap="round" />
+    <path android:pathData="M59,60H73Q75,60 75,62V71Q75,73 73,73H59Q57,73 57,71V62Q57,60 59,60Z"
+        android:fillColor="#FFE2FFF5" />
+    <path android:pathData="M68.4,64.1A3.5,3.5 0,1 0,68.4,69.1"
+        android:fillColor="#00000000" android:strokeColor="#FF46538A" android:strokeWidth="1.8" android:strokeLineCap="round" />
+</vector>
