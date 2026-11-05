@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="18 18 72 72" width="128" height="128">
+  <title>CipherShield</title>
+  <defs>
+    <clipPath id="tile"><rect x="18" y="18" width="72" height="72" rx="18"/></clipPath>
+    <linearGradient id="g1" gradientUnits="userSpaceOnUse" x1="12" y1="0" x2="94" y2="108"><stop offset="0" stop-color="#172E41"/><stop offset="0.52" stop-color="#101C34"/><stop offset="1" stop-color="#201A3A"/></linearGradient>
+    <radialGradient id="g2" gradientUnits="userSpaceOnUse" cx="22" cy="22" r="80"><stop offset="0" stop-color="#3EDCD1" stop-opacity="0.3137254901960784"/><stop offset="1" stop-color="#3EDCD1" stop-opacity="0"/></radialGradient>
+    <radialGradient id="g3" gradientUnits="userSpaceOnUse" cx="88" cy="89" r="65"><stop offset="0" stop-color="#7B66D8" stop-opacity="0.3137254901960784"/><stop offset="1" stop-color="#7B66D8" stop-opacity="0"/></radialGradient>
+    <linearGradient id="g4" gradientUnits="userSpaceOnUse" x1="33" y1="27" x2="74" y2="77"><stop offset="0" stop-color="#F0FFF9" stop-opacity="1"/><stop offset="0.4" stop-color="#D2F9EB" stop-opacity="1"/><stop offset="1" stop-color="#70C5C5" stop-opacity="1"/></linearGradient>
+    <linearGradient id="g5" gradientUnits="userSpaceOnUse" x1="54" y1="49" x2="79" y2="77"><stop offset="0" stop-color="#7F78D7" stop-opacity="1"/><stop offset="0.5" stop-color="#4F4E9C" stop-opacity="1"/><stop offset="1" stop-color="#2C3764" stop-opacity="1"/></linearGradient>
+    <linearGradient id="g6" gradientUnits="userSpaceOnUse" x1="56" y1="48" x2="78" y2="77"><stop offset="0" stop-color="#E4DDFF" stop-opacity="1"/><stop offset="1" stop-color="#778DC6" stop-opacity="1"/></linearGradient>
+  </defs>
+  <g clip-path="url(#tile)">
+    <path d="M0,0H108V108H0Z" fill="url(#g1)"/>
+    <path d="M0,0H108V108H0Z" fill="url(#g2)"/>
+    <path d="M0,0H108V108H0Z" fill="url(#g3)"/>
+    <path d="M40,27H59L72,40V70Q72,77 65,77H40Q33,77 33,70V34Q33,27 40,27Z" fill="#05152740" stroke="#000A1A20" stroke-width="3"/>
+    <path d="M40,27H59L72,40V70Q72,77 65,77H40Q33,77 33,70V34Q33,27 40,27Z" fill="url(#g4)" stroke="#DFFFF8C9" stroke-width="1.1"/>
+    <path d="M59,28V36Q59,41 64,41H71L59,28Z" fill="#439EADFF"/>
+    <path d="M60,29V35Q60,39 64,39H70Z" fill="#FFFFFFD9"/>
+    <path d="M39,29H57V43L35,61V35Q35,29 39,29Z" fill="#FFFFFF30"/>
+    <path d="M42,43H52M42,51H60M42,59H51M42,67H48" fill="#00000000" stroke="#246477FF" stroke-width="3.2" stroke-linecap="round"/>
+    <path d="M66,49A15,15 0,1 1,66,79A15,15 0,1 1,66,49Z" fill="#06122433" stroke="#06122418" stroke-width="2"/>
+    <path d="M66,48A15,15 0,1 1,66,78A15,15 0,1 1,66,48Z" fill="url(#g5)" stroke-width="1.2" stroke="url(#g6)"/>
+    <path d="M55,55Q61,48 70,51" fill="#00000000" stroke="#FFFFFF66" stroke-width="1.1" stroke-linecap="round"/>
+    <path d="M61,61V57A5,5 0,0 1,71,57V61" fill="#00000000" stroke="#F1FCFFFF" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M59,60H73Q75,60 75,62V71Q75,73 73,73H59Q57,73 57,71V62Q57,60 59,60Z" fill="#E2FFF5FF"/>
+    <path d="M68.4,64.1A3.5,3.5 0,1 0,68.4,69.1" fill="#00000000" stroke="#46538AFF" stroke-width="1.8" stroke-linecap="round"/>
+  </g>
+</svg>
