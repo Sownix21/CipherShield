@@ -63,7 +63,13 @@ android {
   testOptions { unitTests { isIncludeAndroidResources = true } }
 }
 
+// The KTX APIs now ship in collection itself. Some libraries still request the old wrapper.
+configurations.named("implementation") {
+  exclude(group = "androidx.collection", module = "collection-ktx")
+}
+
 dependencies {
+  implementation(libs.androidx.collection)
   implementation(platform(libs.androidx.compose.bom))
   implementation(libs.androidx.activity.compose)
   implementation(libs.androidx.camera.camera2)

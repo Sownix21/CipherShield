@@ -1,6 +1,7 @@
 [versions]
 agp = "9.3.2"
 coreKtx = "1.18.0"
+collection = "1.5.0"
 junit = "4.13.2"
 lifecycle = "2.10.0"
 activityCompose = "1.12.4"
@@ -13,6 +14,7 @@ zxingCore = "3.5.4"
 robolectric = "4.16.1"
 
 [libraries]
+androidx-collection = { module = "androidx.collection:collection", version.ref = "collection" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle" }
