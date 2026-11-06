@@ -1,9 +1,11 @@
 package com.example
 
 import android.Manifest
+import android.content.ActivityNotFoundException
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.BitmapFactory
 import android.net.Uri
@@ -61,6 +63,7 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.selection.selectableGroup
@@ -734,30 +737,28 @@ fun GlassCard(
 
 @Composable
 fun StickyHeader() {
-    Surface(color = CosmicSurface.copy(alpha = 0.72f)) {
-        Row(
-            modifier = Modifier.fillMaxWidth().statusBarsPadding().padding(horizontal = 20.dp, vertical = 16.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(12.dp),
+    Row(
+        modifier = Modifier.fillMaxWidth().statusBarsPadding().padding(horizontal = 20.dp, vertical = 16.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(12.dp),
+    ) {
+        Image(
+            painter = painterResource(R.drawable.ic_launcher_foreground),
+            contentDescription = null,
+            modifier = Modifier.size(52.dp).clip(RoundedCornerShape(18.dp))
+                .background(Brush.linearGradient(listOf(TechCyan.copy(alpha = 0.15f), ScannerPurple.copy(alpha = 0.16f)))),
+        )
+        Column(Modifier.weight(1f)) {
+            Text("CipherShield", fontSize = 23.sp, fontWeight = FontWeight.SemiBold, color = WhiteText)
+            Text("Your words. Only your key.", fontSize = 12.sp, color = SoftText)
+        }
+        Surface(
+            shape = RoundedCornerShape(50),
+            color = EmeraldGreen.copy(alpha = 0.10f),
+            border = BorderStroke(1.dp, EmeraldGreen.copy(alpha = 0.25f)),
         ) {
-            Image(
-                painter = painterResource(R.drawable.ic_launcher_foreground),
-                contentDescription = null,
-                modifier = Modifier.size(52.dp).clip(RoundedCornerShape(18.dp))
-                    .background(Brush.linearGradient(listOf(TechCyan.copy(alpha = 0.15f), ScannerPurple.copy(alpha = 0.16f)))),
-            )
-            Column(Modifier.weight(1f)) {
-                Text("CipherShield", fontSize = 23.sp, fontWeight = FontWeight.SemiBold, color = WhiteText)
-                Text("Your words. Only your key.", fontSize = 12.sp, color = SoftText)
-            }
-            Surface(
-                shape = RoundedCornerShape(50),
-                color = EmeraldGreen.copy(alpha = 0.10f),
-                border = BorderStroke(1.dp, EmeraldGreen.copy(alpha = 0.25f)),
-            ) {
-                Text("Offline", fontSize = 11.sp, color = EmeraldGreen,
-                    modifier = Modifier.padding(horizontal = 10.dp, vertical = 7.dp))
-            }
+            Text("Offline", fontSize = 11.sp, color = EmeraldGreen,
+                modifier = Modifier.padding(horizontal = 10.dp, vertical = 7.dp))
         }
     }
 }
@@ -1632,6 +1633,7 @@ fun UnshieldTabContent(
 
 @Composable
 fun AboutTabContent() {
+    val context = LocalContext.current
     Column(
         verticalArrangement = Arrangement.spacedBy(16.dp),
         modifier = Modifier.fillMaxWidth()
@@ -1719,12 +1721,12 @@ fun AboutTabContent() {
 
         Spacer(modifier = Modifier.height(24.dp))
         
-        // Pinned Footer
-        Box(
+        Row(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(bottom = 16.dp),
-            contentAlignment = Alignment.Center
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically
         ) {
             Text(
                 text = "Developed by SONIX",
@@ -1734,6 +1736,23 @@ fun AboutTabContent() {
                 color = SoftText,
                 letterSpacing = 2.sp
             )
+            IconButton(
+                modifier = Modifier.size(48.dp),
+                onClick = {
+                    try {
+                        context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Sownix21")))
+                    } catch (_: ActivityNotFoundException) {
+                        Toast.makeText(context, R.string.github_profile_unavailable, Toast.LENGTH_SHORT).show()
+                    }
+                }
+            ) {
+                Icon(
+                    painter = painterResource(R.drawable.ic_github),
+                    contentDescription = stringResource(R.string.open_sonix_github),
+                    tint = SoftText,
+                    modifier = Modifier.size(20.dp)
+                )
+            }
         }
     }
 }

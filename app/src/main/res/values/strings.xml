@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CipherShield</string>
+    <string name="open_sonix_github">Open SONIX’s GitHub profile</string>
+    <string name="github_profile_unavailable">No app available to open the GitHub profile</string>
 </resources>
