@@ -42,3 +42,5 @@ The result uses **Base64** so it can travel as ordinary text; Base64 itself is n
 For more on these limits, see the [security model](SECURITY.md).
 
 Developed by **SONIX**.
+
+CipherShield is licensed under the [GNU General Public License, version 3 only](LICENSE) (`GPL-3.0-only`). Third-party components retain their respective licenses.
